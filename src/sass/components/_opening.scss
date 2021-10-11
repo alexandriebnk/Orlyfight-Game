@@ -1,0 +1,76 @@
+.opening {
+    display: block;
+    position: absolute;
+    height: 60rem;
+    width: 85rem;
+    left: 45.5%;
+    top: 47.5%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+
+    @media (min-width: $breakpoint-large) {
+        height: 70rem;
+        width: 95rem;
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        height: 75rem;
+        width: 100rem;
+    }
+
+    @media (min-width: $breakpoint-huge) {
+        height: 98rem;
+        width: 133rem;
+    }
+
+    &__title {
+        @include absoluteComplete; 
+        font-family: $roboto;
+        font-size: 16.7rem;
+
+        @media (min-width: $breakpoint-large) {
+            font-size: 20rem;
+        }
+
+        @media (min-width: $breakpoint-xlarge) {
+            font-size: 21.3rem;
+        }
+
+        @media (min-width: $breakpoint-huge) {
+            font-size: 28rem;
+        }
+
+        &-orly {
+            position: absolute;
+            left: 33%;
+            bottom: 0%;
+            color: $gold;
+
+            @media (min-width: $breakpoint-large) {
+                left: 30%;
+            }
+
+            @media (min-width: $breakpoint-xlarge) {
+                left: 29%;
+            }
+        }
+
+        &-fight {
+            position: absolute;
+            right: -2%;
+            bottom: 5.5%;
+            writing-mode: tb-rl;
+            transform: rotate(-180deg);
+            color: transparent;
+            -webkit-text-stroke: .1rem $gold;
+
+            @media (min-width: $breakpoint-large) {
+                right: -3.5%;
+            }
+
+            @media (min-width: $breakpoint-xlarge) {
+                right: -4%;
+            }
+        }
+    }
+}

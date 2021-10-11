@@ -1,0 +1,23 @@
+.howtodo {
+    @include topLeftTranslate;
+    display: block;
+    position: absolute;
+    height: 49rem;
+    width: 87rem;
+    z-index: 30;
+    opacity: 1;
+
+    @media (min-width: $breakpoint-large) {
+        height: 65rem;
+        width: 100rem;
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        width: 110rem;
+    }
+
+    @media (min-width: $breakpoint-huge) {
+        height: 90rem;
+        width: 160rem;
+    }
+}

@@ -1,0 +1,73 @@
+.faces__booba-layer {
+    @include facesLayer;
+    left: 0;
+    transform: translateY(-47.5%);
+}
+
+.faces__booba-layer-1 {
+    -webkit-clip-path: url(#clipPath-booba-1);
+    clip-path: url(#clipPath-booba-1);
+}
+
+.faces__booba-layer-2 {
+    -webkit-clip-path: url(#clipPath-booba-2);
+    clip-path: url(#clipPath-booba-2);
+}
+
+.faces__booba-layer-3 {
+    -webkit-clip-path: url(#clipPath-booba-3);
+    clip-path: url(#clipPath-booba-3);
+}
+
+.booba-layer {
+    @include charactersLayer;
+}
+
+.booba {
+    @include absoluteComplete; 
+    top: 50%;
+    left: 0;
+    transform: translateY(-47.5%);
+
+    &__name {
+        @include mediaQueriesCharactersName;
+        position: absolute;
+        left: 4%;
+        bottom: 0%;
+        color: $gold;
+        font-family: $roboto;
+        font-size: 12rem;
+    }
+
+    &-body {
+        @include charactersBody;
+    }
+}
+
+.booba__name {
+    display: none;
+}
+
+.booba-head {
+    position: absolute;
+    top: -13%;
+    left: 35%;
+
+    @media (min-width: $breakpoint-large) {
+        transform: scale(1.2);
+        left: 36%;
+        z-index: 30;
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        transform: scale(1.4);
+        top: -20%;
+        left: 39%;
+    }
+
+    @media (min-width: $breakpoint-huge) {
+        transform: scale(1.9);
+        top: -26%;
+        left: 42%;
+    }
+}

@@ -1,0 +1,13 @@
+.grid {
+    @include absoluteComplete; 
+    display: block;
+    z-index: 1;
+
+    &::after {
+        @include absoluteComplete; 
+        content: "";
+        background-image: url("./img/grid.png");
+        z-index: 2;
+    }
+}
+

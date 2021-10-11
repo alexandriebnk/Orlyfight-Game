@@ -1,0 +1,38 @@
+@import './sass/abstracts/variables';
+@import './sass/abstracts/mixins';
+
+@import './sass/components/grid';
+@import './sass/components/top-left';
+@import './sass/components/advisory';
+@import './sass/components/buttons';
+@import './sass/components/red-blinker';
+@import './sass/components/instructions-click';
+@import './sass/components/sound';
+@import './sass/components/layer-howtodo';
+@import './sass/components/howtodo';
+@import './sass/components/booba';
+@import './sass/components/kaaris';
+@import './sass/components/opening';
+@import './sass/components/faces';
+@import './sass/components/corner';
+@import './sass/components/close';
+@import './sass/components/game-board';
+@import './sass/components/popin';
+@import './sass/components/players';
+@import './sass/components/game';
+@import './sass/components/character';
+@import './sass/components/current';
+@import './sass/components/box';
+@import './sass/components/jail-box';
+@import './sass/components/layer-fight';
+@import './sass/components/fight';
+@import './sass/components/layer-winner';
+@import './sass/components/winner';
+@import './sass/components/weapons';
+@import './sass/components/loader';
+@import './sass/components/spinner';
+
+@import './sass/layout/desktop';
+@import './sass/layout/mobileTablet';
+
+@import './sass/pages/home';

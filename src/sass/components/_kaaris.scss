@@ -1,0 +1,74 @@
+.faces__kaaris-layer {
+    @include facesLayer;
+    right: 0;
+    transform: translateY(-53.5%);
+}
+
+.faces__kaaris-layer-1 {
+    -webkit-clip-path: url(#clipPath-kaaris-1);
+    clip-path: url(#clipPath-kaaris-1);
+}
+
+.faces__kaaris-layer-2 {
+    -webkit-clip-path: url(#clipPath-kaaris-2);
+    clip-path: url(#clipPath-kaaris-2);
+}
+
+.faces__kaaris-layer-3 {
+    -webkit-clip-path: url(#clipPath-kaaris-3);
+    clip-path: url(#clipPath-kaaris-3);
+}
+
+.kaaris-layer {
+    @include charactersLayer;
+}
+
+.kaaris {
+    @include absoluteComplete; 
+    top: 50%;
+    right: 0;
+    transform: translateY(-53.5%); 
+    
+
+    &__name {
+        @include mediaQueriesCharactersName;
+        position: absolute;
+        right: 4%;
+        bottom: 0%;
+        font-family: $roboto;
+        font-size: 12rem;
+        color: transparent;
+        -webkit-text-stroke: .1rem $gold;
+    }
+
+    &-body {
+        @include charactersBody;
+    }
+}
+
+.kaaris__name {
+    display: none;
+}
+
+.kaaris-head {
+    position: absolute;
+    top: -13%;
+    left: 44%;
+    transform: translateX(-50%); 
+
+    @media (min-width: $breakpoint-large) {
+        transform: scale(1.2);
+        left: 35%;
+        z-index: 30;
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        transform: scale(1.4);
+        top: -25%;
+    }
+
+    @media (min-width: $breakpoint-huge) {
+        transform: scale(1.9);
+        top: -37%;
+    }
+}

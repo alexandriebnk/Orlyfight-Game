@@ -1,0 +1,42 @@
+.sound {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: $robotoCondensed;
+    color: $white;
+    font-size: 1.4rem;
+    top: 6%;
+    right: 6%;
+    z-index: 20;
+
+    @media (min-width: $breakpoint-large) {
+        font-size: 2.3rem;
+        top: 10%;
+        right: 8%;
+    }
+
+    @media (min-width: $breakpoint-huge) {
+        font-size: 3.2rem;
+    }
+
+    &__paragraph {
+        display: block;
+        margin-right: 1.3rem;
+        opacity: 1;
+    } 
+
+    &__player {
+        display: none;
+        margin-top: -.8rem;
+        cursor: pointer;
+
+        @media (min-width: $breakpoint-large) {
+            transform: scale(1.5);
+        }
+
+        @media (min-width: $breakpoint-huge) {
+            transform: scale(2.2);
+        }
+    }
+}

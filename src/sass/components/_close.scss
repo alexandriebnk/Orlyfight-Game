@@ -1,0 +1,24 @@
+.close {
+    position: absolute;
+    height: 3.5rem;
+    width: 3.5rem;
+    top: -3.5%;
+    right: -2%;
+    cursor: pointer;
+    z-index: 10;
+
+    @media (min-width: $breakpoint-large) {
+        height: 5rem;
+        width: 5rem;
+        top: -5%;
+        right: -2.3%;
+    }
+
+    @media (min-width: $breakpoint-huge) {
+        height: 8rem;
+        width: 8rem;
+        right: -2.4%;
+        top: -5.5%;
+    }
+}
+

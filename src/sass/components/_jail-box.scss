@@ -1,0 +1,11 @@
+.jail-box {
+    @include heightWidthTen;
+    background-image: url("./img/jail.svg");
+    background-repeat: no-repeat;
+    background-size: 97% 97%;
+    background-position: center;
+    display: block;
+    border: .1rem solid rgba($gold, .2);
+}
+
+

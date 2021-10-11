@@ -1,0 +1,45 @@
+.corner {
+    @include topLeftTranslate;
+    position: absolute;
+    height: 54rem;
+    width: 63rem;
+
+    @media (min-width: $breakpoint-large) {
+        height: 62rem;
+        width: 70rem;
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        height: 65rem;
+        width: 72.5rem;
+    }
+
+    @media (min-width: $breakpoint-huge) {
+        height: 82.5rem;
+        width: 94rem;
+    }
+
+    &__topLeft {
+        position: absolute;
+        top: 7.5%;
+        left: 1.2%;  
+    }
+
+    &__topRight {
+        position: absolute;
+        transform: rotate(90deg);
+        right: 1.2%;
+        top: .9%;
+    }
+
+    &__bottomLeft {
+        position: absolute;
+        transform: rotate(-90deg);
+        left: 1.3%;
+        bottom: 1.9%;
+    }
+
+    &__fade {
+        opacity: 1;
+    }
+}

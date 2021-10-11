@@ -1,0 +1,46 @@
+.mobileTablet {
+    @include topLeftZero;
+    display: none; 
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 30;
+
+    &__reducedWebsite {
+        @include absoluteComplete; 
+        @include flexColumn;
+        text-align: center;
+        font-family: 'Roboto';
+        padding-top: 5rem;
+        padding-bottom: 5rem; 
+
+        &-orly, 
+        &-fight {
+            font-size: 10rem;
+        }
+
+        &-orly {
+            color: $gold;
+        }
+
+        &-fight {
+            color: transparent;
+            -webkit-text-stroke: .1rem $gold;
+        }
+    }
+
+    &__message {
+        color: $white;
+        font-size: 1.2rem;
+
+        &-arrows {
+            transform: scale(.8);
+            margin-bottom: 1rem;
+        }
+
+        &-paragraph span {
+            line-height: 1.5rem;
+        }
+    }
+}
+

@@ -1,0 +1,8 @@
+.box {
+    @include heightWidthTen;
+    display: block;
+    border: .1rem solid rgba($gold, .2);
+}
+
+
+

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+        <meta name="author" content="Alexandrie Benkiki">
+        <meta name="description" content="Jeu de combat Booba/Kaaris à Orly">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&family=Roboto:wght@900&display=swap" rel="stylesheet">
+        <title>Orly Fight</title>
+        <script type="module" src="index.js"></script>
+</head>
+<body>
+    
+    <div class="loader">
+        <div class="spinner">
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+        </div>
+    </div>
+
+    <div class="grid"></div>
+
+    <div class="mobileTablet">
+        
+        <div class="mobileTablet__reducedWebsite">
+            <p class="mobileTablet__reducedWebsite-orly">ORLY</p>
+            <div class="mobileTablet__message">
+                <img src="./img/square-arrows.png" class="mobileTablet__message-arrows"  alt="square-arrows" />
+                <p class="mobileTablet__message-paragraph">BOOBA & KAARIS<br /><span>ONLY FIGHT ON DESKTOP</span></p>
+            </div>
+            <p class="mobileTablet__reducedWebsite-fight">FIGHT</p>
+        </div>
+    </div>
+
+    <div class="desktop">
+
+        <div class="top__left">
+            <span class="top__left-redBlinker"></span>
+            <p class="top__left-instructions">REC 01-08-2019</p>
+        </div>
+        <div class="sound">
+            <p class="sound__paragraph">TURN ON THE VOLUME TO ENJOY THE GAME</p>
+            <svg class="sound__player" width="50" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="12.5" width="2.5" height="6" fill="white"/>
+                <rect x="4" y="10" width="2.5" height="12" fill="white"/>
+                <rect x="8" y="6" width="2.5" height="18" fill="white"/>
+                <rect x="12" y="8.5" width="2.5" height="13" fill="white"/>
+                <rect x="16" y="13" width="2.5" height="5" fill="white"/>
+                <rect x="20" y="11.5" width="2.5" height="8" fill="white"/>
+                <rect x="24" y="7" width="2.5" height="16" fill="white"/>
+                <rect x="28" y="3" width="2.5" height="23" fill="white"/>
+                <rect x="32" y="8" width="2.5" height="14" fill="white"/>
+                <rect x="36" y="11" width="2.5" height="9" fill="white"/>
+                <rect x="40" y="12.5" width="2.5" height="6" fill="white"/>
+            </svg>
+        </div>
+
+        <div class="opening">
+            <div class="corner">
+                <img src="./img/corner.svg" class="corner__topLeft corner__fade" alt="corner"/>
+                <img src="./img/corner.svg" class="corner__topRight corner__fade" alt="corner"/>
+                <img src="./img/corner.svg" class="corner__bottomLeft corner__fade" alt="corner"/>
+            </div>
+            <div class="faces">
+                <svg>
+                    <clipPath id="clipPath-booba-1" clipPathUnits="objectBoundingBox"><path d="M0.629,0.627 L1,0 H0 V1 H0.538 L0.853,0.601 L0.629,0.627"></path></clipPath>
+                    <clipPath id="clipPath-kaaris-1" clipPathUnits="objectBoundingBox"><path d="M1,0 H0.448 L0.069,0.628 L0.321,0.598 L0.001,1 H1 V0"></path></clipPath>
+                </svg>
+                <div class="faces__booba-layer faces__booba-layer-1">
+                    <img src="./img/booba.png" class="booba" alt="booba"/>
+                </div>
+
+                <div class="faces__kaaris-layer faces__kaaris-layer-1">
+                    <img src="./img/kaaris.png" class="kaaris" alt="kaaris"/>
+                </div>
+            </div>
+            <h1 class="opening__title">
+                <span class="opening__title-orly">ORLY</span>
+                <span class="opening__title-fight">FIGHT</span>
+            </h1>
+        </div>
+        <img src="./img/advisory.jpg" class="advisory" alt="advisory"/>
+        <div class="button__start">
+            <p class="button__start-label">START</p>
+            <svg class="button__start-svg" width="166" height="58" viewBox="0 0 166 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.73852 57.5L26.3385 8.5H165.261L145.661 57.5H6.73852Z" stroke="white"/>
+                <path d="M0.738517 49.5L20.3385 0.5H159.261L139.661 49.5H0.738517Z" fill="white" stroke="white"/>
+            </svg>
+        </div>
+
+        <div class="layer-howtodo">
+            <div class="howtodo">
+                <img src="./img/close.svg" class="close" alt="close"/>
+                <div class="popin">
+                    <h4 class="popin__title">INSTRUCTIONS</h4>
+                    <div class="popin__rules">
+                        <div class="popin__rules-1 popin__rule">
+                            <img src="./img/arrows.svg" alt="arrows"/>
+                            <p class="popin__paragraph">MOVE <br/> YOUR CHARACTER</p>
+                        </div>
+                        <div class="popin__rules-2 popin__rule">
+                            <img src="./img/heels.svg" alt="heels"/>
+                            <p class="popin__paragraph">SELECT <br/>YOUR WEAPON</p>  
+                        </div>
+                        <div class="popin__rules-3 popin__rule">
+                            <img src="./img/button-a.svg" alt="button-a"/>
+                            <p class="popin__paragraph">INFLICT<br/>DAMAGES</p>
+                        </div>
+                        <div class="popin__rules-4 popin__rule">
+                            <img src="./img/button-d.svg" alt="button-d"/>
+                            <p class="popin__paragraph">REDUCE NEXT<br/>ATTACK BY 50%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game">
+            <div class="game__booba">
+                <div class="game__booba-character character">
+                    <img src="./img/booba-head.png" class="booba-head" alt="booba-head"/>
+                    <img src="./img/booba-body.svg" class="booba-body" alt="booba-body"/>
+                </div>
+                <div class="game__booba-current current">
+                    <div class="game__booba-life">
+                        <img src="./img/life.svg" class="game__booba-life-img" alt="life"/>
+                        <p class="game__booba-life-result-1"></p>
+                    </div>
+                    <div class="game__booba-weapon">
+                        <img src="./img/weapon.svg" class="game__booba-weapon-img" alt="weapon"/>
+                        <img src="#" class="game__booba-weapon-result-1" alt="weapon"/>
+                    </div>
+                    <div class="game__booba-damages">
+                        <img src="./img/damages.svg" class="game__booba-damages-img" alt="damages"/>
+                        <p class="game__booba-damages-result-1"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="game__board"></div>
+            </div>
+            
+            <div class="game__kaaris">
+                <div class="game__kaaris-character character">
+                    <img src="./img/kaaris-head.png" class="kaaris-head" alt="kaaris-head"/>
+                    <img src="./img/kaaris-body.svg" class="kaaris-body" alt="kaaris-body"/>
+                </div>
+                <div class="game__kaaris-current current">
+                    <div class="game__kaaris-life">
+                        <img src="./img/life.svg" class="game__kaaris-life-img" alt="life"/>
+                        <p class="game__kaaris-life-result-2"></p>
+                    </div>
+                    <div class="game__kaaris-weapon">
+                        <img src="./img/weapon.svg" class="game__kaaris-weapon-img" alt="weapon"/>
+                        <img src="#" class="game__kaaris-weapon-result-2" alt="weapon"/>
+                    </div>
+                    <div class="game__kaaris-damages">
+                        <img src="./img/damages.svg" class="game__kaaris-damages-img" alt="damages"/>
+                        <p class="game__kaaris-damages-result-2"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="booba__name" id="booba__name">BOOBA</h3>
+        <h3 class="kaaris__name" id="kaaris__name">KAARIS</h3>
+
+        <div class="layer-fight">
+            <div class="fight">
+                <div class="faces">
+                    <svg>
+                        <clipPath id="clipPath-booba-2" clipPathUnits="objectBoundingBox"><path d="M0.629,0.627 L1,0 H0 V1 H0.538 L0.853,0.601 L0.629,0.627"></path></clipPath>
+                        <clipPath id="clipPath-kaaris-2" clipPathUnits="objectBoundingBox"><path d="M1,0 H0.448 L0.069,0.628 L0.321,0.598 L0.001,1 H1 V0"></path></clipPath>
+                    </svg>
+                    <div class="faces__booba-layer faces__booba-layer-2">
+                        <img src="./img/booba.png" class="booba" alt="booba"/>
+                    </div>
+        
+                    <div class="faces__kaaris-layer faces__kaaris-layer-2">
+                        <img src="./img/kaaris.png" class="kaaris" alt="kaaris"/>
+                    </div>
+                </div>
+                <h2 class="fight__title">
+                    <span class="fight__title-top">FIGHT</span>
+                    <span class="fight__title-bottom">FIGHT</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="layer-winner">
+            <div class="winner">
+                <div class="faces">
+                    <svg>
+                        <clipPath id="clipPath-booba-3" clipPathUnits="objectBoundingBox"><path d="M0.629,0.627 L1,0 H0 V1 H0.538 L0.853,0.601 L0.629,0.627"></path></clipPath>
+                        <clipPath id="clipPath-kaaris-3" clipPathUnits="objectBoundingBox"><path d="M1,0 H0.448 L0.069,0.628 L0.321,0.598 L0.001,1 H1 V0"></path></clipPath>
+                    </svg>
+                    <div class="faces__booba-layer faces__booba-layer-3">
+                        <div class="booba-layer"></div>
+                        <img src="./img/booba.png" class="booba" alt="booba"/>
+                    </div>
+
+                    <div class="faces__kaaris-layer faces__kaaris-layer-3">
+                        <div class="kaaris-layer"></div>
+                        <img src="./img/kaaris.png" class="kaaris" alt="kaaris"/>
+                    </div>
+                </div>
+                <h2 class="winner__title">
+                    <span class="winner__title-top">#</span> 
+                    <span class="winner__title-bottom">#</span>
+                </h2>
+            </div>
+        </div>
+        <div class="button__restart">
+            <p class="button__restart-label">RESTART</p>
+            <svg class="button__restart-svg" width="166" height="58" viewBox="0 0 166 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.73852 57.5L26.3385 8.5H165.261L145.661 57.5H6.73852Z" stroke="white"/>
+                <path d="M0.738517 49.5L20.3385 0.5H159.261L139.661 49.5H0.738517Z" fill="white" stroke="white"/>
+            </svg>
+        </div>
+
+    </div>
+
+</body>
+</html>

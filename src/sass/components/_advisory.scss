@@ -1,0 +1,21 @@
+.advisory {
+    display: block;
+    position: absolute;
+    bottom: 6%;
+    left: 6%;
+
+    @media (min-width: $breakpoint-large) {
+        transform: scale(1.4);
+        bottom: 10%;
+        left: 8%;
+    }
+
+    @media (min-width: $breakpoint-huge) {
+        transform: scale(2.2);
+        bottom: 13%;
+        left: 10%;  
+    }
+}
+
+
+  

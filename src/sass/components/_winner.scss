@@ -1,0 +1,57 @@
+.winner {
+    @include topLeftTranslate;
+    display: block;
+    position: absolute;
+    height: 60rem;
+    width: 85rem;
+
+    @media (min-width: $breakpoint-large) {
+        height: 70rem;
+        width: 95rem;
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        height: 75rem;
+        width: 100rem;
+    }
+
+    @media (min-width: $breakpoint-huge) {
+        height: 98rem;
+        width: 133rem;
+    }
+
+    &__title {
+        @include absoluteComplete; 
+        font-family: $roboto;
+        font-size: 16.7rem;
+
+        @media (min-width: $breakpoint-large) {
+            font-size: 20rem;
+        }
+
+        @media (min-width: $breakpoint-xlarge) {
+            font-size: 21.3rem;
+        }
+
+        @media (min-width: $breakpoint-huge) {
+            font-size: 28rem;
+        }
+
+        &-top {
+            position: absolute;
+            right: 4%;
+            top: 0%;
+            color: $gold;
+            opacity: 1;
+        }
+
+        &-bottom {
+            position: absolute;
+            left: 4%;
+            bottom: 1%;
+            color: transparent;
+            -webkit-text-stroke: .1rem $gold;
+            opacity: 1;
+        }
+    }
+}

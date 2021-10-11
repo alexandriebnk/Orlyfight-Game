@@ -1,0 +1,25 @@
+.top__left-redBlinker {
+    position: absolute;
+    background-color: red;
+    height: .6rem;
+    width: .6rem;
+    border-radius: 100%;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    opacity: 1;
+
+    @media (min-width: $breakpoint-large) {
+        height: 1rem;
+        width: 1rem;
+        left: -4%;
+        top: 40%;
+    }
+
+    @media (min-width: $breakpoint-huge) {
+        height: 1.5rem;
+        width: 1.5rem;
+        left: -6%;
+        top: 50%;
+    }
+}

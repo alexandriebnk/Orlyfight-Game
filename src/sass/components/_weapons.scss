@@ -1,0 +1,27 @@
+.kalash,
+.heels,
+.champagne,
+.perfume {
+    @include heightWidthTen;
+    background-size: 100% 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    border: .1rem solid rgba($gold, .2);
+}
+
+.kalash {
+    background-image: url("./img/kalash.svg");
+}
+
+.heels {
+    background-image: url("./img/heels.svg");
+}
+
+.champagne {
+    background-image: url("./img/champagne.svg");
+}
+
+.perfume {
+    background-image: url("./img/perfume.svg");
+}
