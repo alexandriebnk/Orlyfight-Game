@@ -358,27 +358,8 @@ class Game {
     player.inputLife.text("100");
     // Leur assigner une arme + infos de l'arme
     const infoWeaponOne = this.mathRandomWeapon() - 1;
-    // Créer variable pour arme
-    let weaponSource = null;
-    // Créer switch pour attribuer l'arme à chaque joueur
-    switch (this.weapons[infoWeaponOne].name) {
-      case "kalash":
-        weaponSource = ak47Img;
-        break;
-      case "heels":
-        weaponSource = heelsImg;
-        break;
-      case "champagne":
-        weaponSource = champagneImg;
-        break;
-      case "perfume":
-        weaponSource = perfumeImg;
-        break;
-      default:
-        break;
-    }
-    // Attribuer infos
-    player.inputWeapon.attr("src", weaponSource);
+    // Updater nouvelle weapon
+    this.changeSourceWeapon(player, this.weapons[infoWeaponOne].name);
     player.inputDamages.text(this.weapons[infoWeaponOne].damages);
     player.currentWeapon = this.weapons[infoWeaponOne];
   }
@@ -489,6 +470,31 @@ class Game {
     this.confrontation();
   }
 
+  // Méthode pour updater l'arme
+  changeSourceWeapon(player, name) {
+    // Créer variable pour arme
+    let weaponSource = null;
+    // Créer switch pour attribuer l'arme à chaque joueur
+    switch (name) {
+      case "kalash":
+        weaponSource = ak47Img;
+        break;
+      case "heels":
+        weaponSource = heelsImg;
+        break;
+      case "champagne":
+        weaponSource = champagneImg;
+        break;
+      case "perfume":
+        weaponSource = perfumeImg;
+        break;
+      default:
+        break;
+    }
+    // Attribuer infos
+    player.inputWeapon.attr("src", weaponSource);
+  }
+
   // Changement d'arme
   updateWeapon() {
     // Boucler sur toutes les armes affichées dans jeu
@@ -498,15 +504,16 @@ class Game {
       if (this.activePlayer.position == this.arrayPositionWeapons[i]) {
         // Reprendre les infos de l'arme et laisser la sienne sur jeu
         this.activePlayer.previousWeapon = this.activePlayer.currentWeapon;
-        this.activePlayer.inputWeapon.attr(
-          "src",
-          "img/" + this.arrayEachWeapon[i].name + ".svg"
-        );
         this.activePlayer.inputDamages.text(this.arrayEachWeapon[i].damages);
         $(this.arrayDiv[this.arrayPositionWeapons[i]])
           .removeClass(this.arrayEachWeapon[i].name)
           .addClass("player-" + this.activePlayer.number);
         this.activePlayer.currentWeapon = this.arrayEachWeapon[i];
+        // Updater nouvelle weapon
+        this.changeSourceWeapon(
+          this.activePlayer,
+          this.activePlayer.currentWeapon.name
+        );
         // Mettre l'ancienne arme dans le tableau des armes dans le jeu
         this.arrayEachWeapon[i] = this.activePlayer.previousWeapon;
         // Activer le son pour le changement d'arme
