@@ -14,6 +14,11 @@ import ak47 from "url:../sounds/ak47.mp3";
 import bottleChampagne from "url:../sounds/bottle-champagne.mp3";
 import highHeels from "url:../sounds/high-heels.mp3";
 import endSound from "url:../sounds/end-sound.mp3";
+// Images armes
+import ak47Img from "url:../img/kalash.svg";
+import champagneImg from "url:../img/champagne.svg";
+import heelsImg from "url:../img/heels.svg";
+import perfumeImg from "url:../img/perfume.svg";
 
 // Créer les objets Armes
 const kalash = {
@@ -353,10 +358,27 @@ class Game {
     player.inputLife.text("100");
     // Leur assigner une arme + infos de l'arme
     const infoWeaponOne = this.mathRandomWeapon() - 1;
-    player.inputWeapon.attr(
-      "src",
-      "./img/" + this.weapons[infoWeaponOne].name + ".svg"
-    );
+    // Créer variable pour arme
+    let weaponSource = null;
+    // Créer switch pour attribuer l'arme à chaque joueur
+    switch (this.weapons[infoWeaponOne].name) {
+      case "kalash":
+        weaponSource = ak47Img;
+        break;
+      case "heels":
+        weaponSource = heelsImg;
+        break;
+      case "champagne":
+        weaponSource = champagneImg;
+        break;
+      case "perfume":
+        weaponSource = perfumeImg;
+        break;
+      default:
+        break;
+    }
+    // Attribuer infos
+    player.inputWeapon.attr("src", weaponSource);
     player.inputDamages.text(this.weapons[infoWeaponOne].damages);
     player.currentWeapon = this.weapons[infoWeaponOne];
   }
